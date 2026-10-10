@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong>Your experiences, turned into a clear and accurate English resume. No manual formatting needed! Write freely! Edit freely!</strong><br />
-  For CS and related master's applications. Editable JSON, LaTeX and PDF output.
+  For degree's applications and job hunting. Editable JSON, LaTeX and PDF output.
 </p>
 
 <p align="center">
