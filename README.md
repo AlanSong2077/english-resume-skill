@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  This resume builder has helped many people receive OFFERs when applying to multiple universities, including UIUC, Georgia Tech, UT Austin, University of Wisconsin–Madison, University of Leeds, University of Southampton, University of Liverpool, UPenn, University of Sydney, and many others!
+  <strong>This resume builder has helped many people receive OFFERs when applying to multiple universities, including UIUC, Georgia Tech, UT Austin, University of Wisconsin–Madison, University of Leeds, University of Southampton, University of Liverpool, UPenn, University of Sydney, and many others!<strong>
 </p>
 
 
