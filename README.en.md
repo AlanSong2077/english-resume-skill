@@ -2,124 +2,94 @@
 
 [中文](README.md) | **English**
 
-**Turn your experiences and existing resume into an accurate, consistently formatted English resume.**
+**Turn your experiences and existing materials into a consistently formatted, editable English resume.**
 
-An AI Skill for CS and related master's applications, with research-oriented and professional profiles. The agent extracts and rewrites supplied facts; a standalone Python helper produces editable LaTeX and optional PDF. No invented credentials, dates, metrics or publications.
+For CS and related master's applications, with research and professional profiles. AI organizes and rewrites supplied facts; Python generates LaTeX/PDF. Missing, unclear or contradictory facts require human verification.
 
-![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue)
-![Python: 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue)
+## Quick start
 
-## Start here
+Download and extract the repository. Rename the complete folder to `english-resume-skill-agent` and install it in a host that supports Skills. For Codex, use `~/.agents/skills/` or your project's `.agents/skills/`. On Windows, use `<user profile>/.agents/skills/`.
 
-Choose **A** if you want AI to organize your materials and write English. Choose **B** if you already have structured JSON.
-
-### A. Install and invoke the Skill
-
-1. Download this repository as a ZIP and extract it.
-2. Rename the extracted directory to `english-resume-skill-agent`. Keep SKILL.md, scripts and assets together.
-3. For Codex, place the folder inside `~/.agents/skills/` for user-wide access, or `.agents/skills/` in your project. On Windows use `<user profile>/.agents/skills/`.
-4. Check the final path: `.agents/skills/english-resume-skill-agent/SKILL.md`. Avoid an extra nested folder. Reopen Codex if the Skill is not discovered.
-5. Attach your existing resume or experience notes and send:
+Check the path: `.agents/skills/english-resume-skill-agent/SKILL.md`. Keep the entire folder, not just SKILL.md. Attach your materials and send:
 
 ```text
 $english-resume-skill-agent
-Create an English resume for my CS master's applications from the materials I provide.
-Use the research-oriented (or professional) profile and preserve the fixed layout.
-Ask me to verify all missing, unclear or contradictory facts before final delivery.
-Deliver JSON, LaTeX and a PDF when compilation is available.
+Create an English resume for my CS master's applications from my materials.
+Use the research (or professional) profile and preserve the fixed layout.
+Ask me to verify missing or unclear facts before final delivery.
 ```
 
-This requires a host that supports Skills and file execution. Other platforms use their own installation mechanism; ordinary chat interfaces may not execute scripts. See [OpenAI's Skill documentation](https://learn.chatgpt.com/docs/build-skills). Automatic matching is enabled; explicit invocation is more predictable.
+Research profiles emphasize methods, experiments and academic preparation. Professional profiles prioritize employment and technical contributions.
 
-### B. Run Python without an AI host
+## Workflow
 
-Requires Python 3.9+ with no pip dependencies. Prefer a currently supported Python release. From the repository root:
+```mermaid
+flowchart TD
+    A[Read materials] --> B[Organize facts]
+    B --> C{Missing, unclear or conflicting facts?}
+    C -->|Yes| D[Human verification: supply, confirm, correct or approve omission]
+    D --> E{All questions resolved?}
+    E -->|No| D
+    E -->|Yes| F[Rewrite in English]
+    C -->|No| F
+    F --> G[Generate JSON]
+    G --> H[Python generates LaTeX]
+    H --> I[Compile PDF when available]
+    I --> J[Review facts and layout, then deliver]
+```
+
+Unresolved facts permit only a labelled draft. Python validates structure; it cannot verify factual truth.
+
+## Requirements
+
+- Skill workflow: an AI host with Skill support and file execution.
+- LaTeX output: [Python](https://www.python.org/downloads/), with no pip packages required.
+- PDF output: a LaTeX compiler, such as [MacTeX](https://tug.org/mactex/), [MiKTeX](https://miktex.org/download) or [TeX Live](https://tug.org/texlive/).
+
+If you already have JSON, run this from the repository root:
 
 ```bash
-# Editable LaTeX only
-python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/resume.tex
-
-# LaTeX and PDF, with a LaTeX compiler installed
 python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/resume.tex --pdf
 ```
 
-On Windows replace `python3` with `py -3` if appropriate. The script formats supplied JSON; it does not parse raw documents or independently write resume prose. It needs no AI API key.
+Omit `--pdf` without a compiler. On Windows, `py -3` can replace `python3`. See the [field reference](references/schema.md) and [demo guide](examples/DEMO-GUIDE.md) for details.
 
-## Project-reported outcomes
+## Four examples
 
-**30+ Australian university admissions · 20+ US university admissions**
+These two-page fictional examples demonstrate different applicant backgrounds. People, experiences and numbers are invented for teaching, not real application material. example.com links are demonstrations.
 
-These application outcomes were supplied by the project author, as of October 2026. They have not been independently verified by this repository and do not attribute admission decisions solely to the resume tool. All public examples are fictional.
+### Research: machine learning and reliable AI
 
-## Four complete examples
+Experiments, data quality, calibration and reproducibility.
 
-Each fictional resume is two pages, approximately 640–670 English words. People, institutions, advisors, achievements and numbers are invented for instruction. Links to example.com demonstrate clickable project titles rather than real repositories. Click an image to open the preview.
+[![Research: machine learning and reliable AI](docs/images/01-research-ai.png)](docs/images/01-research-ai.png)
 
-### 1. Research: machine learning and reliable AI
+[PDF](examples/01-research-ai.pdf) · [JSON](examples/01-research-ai.json)
 
-Maya Chen combines undergraduate research, data quality work and an ML internship. The example highlights calibration, controlled comparisons, evaluation protocols and reproducibility, with no invented publication entry.
+### Research: mathematics to scientific computing
 
-[![Research resume: machine learning, two-page preview](docs/images/01-research-ai.png)](docs/images/01-research-ai.png)
+Numerical methods, optimization, teaching and interdisciplinary preparation.
 
-[PDF](examples/01-research-ai.pdf) · [JSON](examples/01-research-ai.json) · [LaTeX](examples/01-research-ai.tex)
+[![Research: mathematics to scientific computing](docs/images/02-research-scientific-computing.png)](docs/images/02-research-scientific-computing.png)
 
-### 2. Research: mathematics to scientific computing
+[PDF](examples/02-research-scientific-computing.pdf) · [JSON](examples/02-research-scientific-computing.json)
 
-Owen Patel combines applied mathematics, a computing minor, numerical-methods research and teaching. The example shows convergence checks, solver comparisons and preparation for interdisciplinary study. A departmental thesis is not presented as a published paper.
+### Professional: backend and distributed systems
 
-[![Research resume: scientific computing, two-page preview](docs/images/02-research-scientific-computing.png)](docs/images/02-research-scientific-computing.png)
+Order services, database performance, queues and failure testing.
 
-[PDF](examples/02-research-scientific-computing.pdf) · [JSON](examples/02-research-scientific-computing.json) · [LaTeX](examples/02-research-scientific-computing.tex)
+[![Professional: backend and distributed systems](docs/images/03-professional-backend.png)](docs/images/03-professional-backend.png)
 
-### 3. Professional: backend and distributed systems
+[PDF](examples/03-professional-backend.pdf) · [JSON](examples/03-professional-backend.json)
 
-Daniel Rivera has four years of backend engineering experience. The example covers order services, database performance, task queues, migration checks and failure testing.
+### Professional: mobile, HCI and accessibility
 
-[![Professional resume: backend engineering, two-page preview](docs/images/03-professional-backend.png)](docs/images/03-professional-backend.png)
+Mobile performance, offline sync, user research and accessibility.
 
-[PDF](examples/03-professional-backend.pdf) · [JSON](examples/03-professional-backend.json) · [LaTeX](examples/03-professional-backend.tex)
+[![Professional: mobile, HCI and accessibility](docs/images/04-professional-mobile.png)](docs/images/04-professional-mobile.png)
 
-### 4. Professional: mobile, HCI and accessibility
+[PDF](examples/04-professional-mobile.pdf) · [JSON](examples/04-professional-mobile.json)
 
-Sofia Kim combines mobile development and frontend experience. The example covers startup performance, offline synchronization, usability research and accessible interactions.
+## License
 
-[![Professional resume: mobile engineering, two-page preview](docs/images/04-professional-mobile.png)](docs/images/04-professional-mobile.png)
-
-[PDF](examples/04-professional-mobile.pdf) · [JSON](examples/04-professional-mobile.json) · [LaTeX](examples/04-professional-mobile.tex)
-
-See the [demo guide](examples/DEMO-GUIDE.md) and [field reference](references/schema.md). These extensive examples teach structure and wording; they are not a requirement to fill two pages in every application.
-
-## Workflow and human verification
-
-**Read materials → inventory facts → human verification → English rewriting → JSON → LaTeX/PDF → final review.**
-
-The user must supply, confirm, correct, approve omission or mark inapplicable every unclear, missing or contradictory item. Until all items are resolved, only a clearly labelled draft and separate verification checklist may be delivered. Python validates structure; it cannot verify truth or human approval.
-
-Research profiles prioritize research methods, experiments and academic preparation. Professional profiles prioritize employment and technical contributions. Both use the same fixed layout. Empty sections are omitted. Copy an example JSON, replace every fictional fact with verified personal information, and set `profile` to `research` or `professional`. Use `score` for an original percentage average and `gpa` for an explicitly supplied GPA; never invent a conversion.
-
-## Downloads and PDF requirements
-
-Python generates LaTeX. PDF generation additionally needs a compiler in PATH:
-
-- [Python](https://www.python.org/downloads/)
-- [MacTeX for macOS](https://tug.org/mactex/)
-- [MiKTeX for Windows](https://miktex.org/download)
-- [TeX Live for Linux](https://tug.org/texlive/)
-
-The helper tries tectonic, xelatex, lualatex, then pdflatex. Missing packages may require network downloads. Without a compiler, omit `--pdf`. The default template targets English; non-Latin text needs suitable fonts.
-
-## Validation and privacy
-
-```bash
-python3 -m unittest discover -s tests
-```
-
-The four PDFs were compiled and visually reviewed on macOS with XeLaTeX. Unit tests and relocated-directory checks passed. Windows, Linux, other compilers and other AI hosts have not been fully tested locally. Verify final facts and layout for each real application.
-
-The helper does not upload resumes or call AI APIs. AI-host data handling depends on your selected provider. Keep personal applicant materials outside this repository.
-
-## Contribute and license
-
-Contributions to input handling, errors, portability and documentation are welcome. Discuss fixed-template or content-policy changes in an Issue first. Do not submit real personal data in examples or tests.
-
-Licensed under [Apache-2.0](LICENSE).
+[Apache-2.0](LICENSE). Issues and improvements are welcome.
