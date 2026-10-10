@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <strong>将你的经历，写成清晰、可信、排版统一的英文简历。</strong><br />
-  用于 CS 及相关专业硕士申请，输出可编辑的 JSON、LaTeX 和 PDF。
+  <strong>将你的经历，写成清晰、可信、排版统一的英文简历，不用考虑排版，自由发挥，任意探索。</strong><br />
+  用于学术申请、求职，输出可编辑的 JSON、LaTeX 和 PDF。
 </p>
 
 <p align="center"> 
