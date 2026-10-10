@@ -1,10 +1,24 @@
-# English Resume Skill Agent
+<p align="center">
+  <img src="docs/images/project-banner.svg" alt="English Resume Skill Agent" width="100%" />
+</p>
 
-**中文** | [English](README.en.md)
+<p align="center">
+  <strong>中文</strong> · <a href="README.en.md">English</a>
+</p>
 
-**根据你的经历和现有材料，生成排版统一、可编辑的英文简历。**
+<p align="center">
+  <strong>将你的经历，写成清晰、可信、排版统一的英文简历。</strong><br />
+  用于 CS 及相关专业硕士申请，输出可编辑的 JSON、LaTeX 和 PDF。
+</p>
 
-适用于 CS 及相关专业硕士申请，支持研究型和就业型简历。AI 整理与润色内容，Python 生成 LaTeX/PDF；不清楚、缺失或矛盾的信息必须先由用户人工核验。
+<p align="center">
+  <a href="#快速使用">开始使用</a> · <a href="#使用流程">工作流程</a> · <a href="#四套成果展示">查看案例</a> · <a href="LICENSE">Apache-2.0</a>
+</p>
+
+| 研究型简历 | 就业型简历 |
+| :--- | :--- |
+| 研究问题、方法、实验与学术准备 | 工作经历、技术贡献与项目成果 |
+| 展示科研能力，不补造论文 | 展示工程能力，保留真实贡献 |
 
 ## 快速使用
 
@@ -19,24 +33,9 @@ $english-resume-skill-agent
 不清楚或缺失的信息必须先让我人工核验。
 ```
 
-研究型突出研究方法、实验和学术背景；就业型优先展示工作经历与技术贡献。
-
 ## 使用流程
 
-```mermaid
-flowchart TD
-    A[读取材料] --> B[整理事实]
-    B --> C{有不清楚、缺失或矛盾的信息？}
-    C -->|有| D[用户人工核验：补充、确认、更正或批准省略]
-    D --> E{全部疑点已处理？}
-    E -->|否| D
-    E -->|是| F[英文润色]
-    C -->|无| F
-    F --> G[生成 JSON]
-    G --> H[Python 生成 LaTeX]
-    H --> I[编译 PDF（环境允许时）]
-    I --> J[核对事实与排版后交付]
-```
+![从材料到英文简历的六步横向流程，第三步为人工核验](docs/images/workflow-cn.svg)
 
 人工核验完成前，只能交付待核验草稿；Python 检查结构，不能代替事实确认。
 
@@ -56,39 +55,38 @@ python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/res
 
 ## 四套成果展示
 
-以下为两页虚构教学案例，展示不同背景的写法。人物、经历和数字均为虚构，不能作为真实申请材料；example.com 链接仅作演示。
+以下均为两页虚构教学案例。点击图片查看大图，或下载 PDF；人物、经历及数字均为虚构。
 
-### 研究型：机器学习与可靠 AI
-
-研究实验、数据质量、模型校准和复现。
-
-[![研究型：机器学习与可靠 AI](docs/images/01-research-ai.png)](docs/images/01-research-ai.png)
-
-[PDF](examples/01-research-ai.pdf) · [JSON](examples/01-research-ai.json)
-
-### 研究型：数学转科学计算
-
-数值方法、优化研究、助教经历和跨专业准备。
-
-[![研究型：数学转科学计算](docs/images/02-research-scientific-computing.png)](docs/images/02-research-scientific-computing.png)
-
-[PDF](examples/02-research-scientific-computing.pdf) · [JSON](examples/02-research-scientific-computing.json)
-
-### 就业型：后端与分布式系统
-
-订单系统、数据库优化、任务队列和故障测试。
-
-[![就业型：后端与分布式系统](docs/images/03-professional-backend.png)](docs/images/03-professional-backend.png)
-
-[PDF](examples/03-professional-backend.pdf) · [JSON](examples/03-professional-backend.json)
-
-### 就业型：移动端、HCI 与无障碍
-
-移动端性能、离线同步、用户研究与无障碍设计。
-
-[![就业型：移动端、HCI 与无障碍](docs/images/04-professional-mobile.png)](docs/images/04-professional-mobile.png)
-
-[PDF](examples/04-professional-mobile.pdf) · [JSON](examples/04-professional-mobile.json)
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>机器学习与可靠 AI</h3>
+<p>研究型 · 校准、实验与复现</p>
+<a href="docs/images/01-research-ai.png"><img src="docs/images/01-research-ai.png" alt="机器学习与可靠 AI" width="100%" /></a>
+<p><a href="examples/01-research-ai.pdf">PDF</a> · <a href="examples/01-research-ai.json">JSON</a></p>
+</td>
+<td width="50%" valign="top">
+<h3>数学转科学计算</h3>
+<p>研究型 · 数值方法与优化</p>
+<a href="docs/images/02-research-scientific-computing.png"><img src="docs/images/02-research-scientific-computing.png" alt="数学转科学计算" width="100%" /></a>
+<p><a href="examples/02-research-scientific-computing.pdf">PDF</a> · <a href="examples/02-research-scientific-computing.json">JSON</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>后端与分布式系统</h3>
+<p>就业型 · 服务、数据库与可靠性</p>
+<a href="docs/images/03-professional-backend.png"><img src="docs/images/03-professional-backend.png" alt="后端与分布式系统" width="100%" /></a>
+<p><a href="examples/03-professional-backend.pdf">PDF</a> · <a href="examples/03-professional-backend.json">JSON</a></p>
+</td>
+<td width="50%" valign="top">
+<h3>移动端、HCI 与无障碍</h3>
+<p>就业型 · 性能、同步与用户体验</p>
+<a href="docs/images/04-professional-mobile.png"><img src="docs/images/04-professional-mobile.png" alt="移动端、HCI 与无障碍" width="100%" /></a>
+<p><a href="examples/04-professional-mobile.pdf">PDF</a> · <a href="examples/04-professional-mobile.json">JSON</a></p>
+</td>
+</tr>
+</table>
 
 ## 许可
 
