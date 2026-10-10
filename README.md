@@ -53,9 +53,9 @@ python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/res
 
 没有编译器时去掉 `--pdf`；Windows 可用 `py -3` 替代 `python3`。更多字段与复现方法见 [字段说明](references/schema.md) 和 [DEMO 指南](examples/DEMO-GUIDE.md)。
 
-## 四套成果展示
+## 案例
 
-以下均为两页虚构教学案例。点击图片查看大图，或下载 PDF；人物、经历及数字均为虚构。
+以下均为两页人物、经历及数字均为虚构。
 
 <table>
 <tr>
