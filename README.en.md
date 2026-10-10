@@ -15,11 +15,6 @@
   <a href="#quick-start">Get started</a> · <a href="#workflow">Workflow</a> · <a href="#four-examples">Explore examples</a> · <a href="LICENSE">Apache-2.0</a>
 </p>
 
-| Research resume | Professional resume |
-| :--- | :--- |
-| Research questions, methods, experiments and academic preparation | Employment, technical contributions and project outcomes |
-| Show research capability without inventing publications | Show engineering capability with accurate attribution |
-
 ## Quick start
 
 Download and extract the repository. Rename the complete folder to `english-resume-skill-agent` and install it in a host that supports Skills. For Codex, use `~/.agents/skills/` or your project's `.agents/skills/`. On Windows, use `<user profile>/.agents/skills/`.
@@ -53,9 +48,9 @@ python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/res
 
 Omit `--pdf` without a compiler. On Windows, `py -3` can replace `python3`. See the [field reference](references/schema.md) and [demo guide](examples/DEMO-GUIDE.md) for details.
 
-## Four examples
+## Cases
 
-Four two-page fictional teaching examples. Click a preview to enlarge it, or open the PDF. People, experiences and numbers are invented.
+People, experiences and numbers are invented.
 
 <table>
 <tr>
