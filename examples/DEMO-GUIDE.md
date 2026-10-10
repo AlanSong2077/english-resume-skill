@@ -16,7 +16,7 @@
 1. 选择接近自己目标的 JSON，复制到技能包以外的个人工作目录。
 2. 替换 personal_info、education 和各段经历。姓名、邮箱、GPA、日期、导师、贡献、指标、论文状态必须来自自己的真实材料。删除不适用的条目；不能复制 DEMO 数字或经历。
 3. profile 为 research 或 professional。字段含义见 ../references/schema.md。
-4. 若使用 AI，可输入：`$english-resume-skill-agent 请参考这份 DEMO 的字段结构，依据我的材料生成简历。保留制式排版，不要使用 DEMO 的个人事实；不确定内容单独列出。`
+4. 若使用 AI，可输入：`$english-resume-skill 请参考这份 DEMO 的字段结构，依据我的材料生成简历。保留制式排版，不要使用 DEMO 的个人事实；不确定内容单独列出。`
 5. 在技能根目录执行以下命令。macOS/Linux 使用 python3；Windows 可改为 py -3。
 
 ```bash

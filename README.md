@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/project-banner.svg" alt="English Resume Skill Agent" width="100%" />
+  <img src="docs/images/project-banner.svg" alt="English Resume Skill" width="100%" />
 </p>
 
 <p align="center">
@@ -18,12 +18,12 @@
 
 ## 快速使用
 
-下载并解压仓库，将整个文件夹命名为 `english-resume-skill-agent`，安装到支持 Skill 的工具中。Codex 用户可放到 `~/.agents/skills/`，或项目的 `.agents/skills/` 下；Windows 用户目录为 `<user profile>/.agents/skills/`。
+下载并解压仓库，将整个文件夹命名为 `english-resume-skill`，安装到支持 Skill 的工具中。Codex 用户可放到 `~/.agents/skills/`，或项目的 `.agents/skills/` 下；Windows 用户目录为 `<user profile>/.agents/skills/`。
 
-确认目录为 `.agents/skills/english-resume-skill-agent/SKILL.md`，不要只复制 SKILL.md。然后附上自己的材料，输入：
+确认目录为 `.agents/skills/english-resume-skill/SKILL.md`，不要只复制 SKILL.md。然后附上自己的材料，输入：
 
 ```text
-$english-resume-skill-agent
+$english-resume-skill
 请根据我的材料生成英文 CS 硕士申请简历。
 采用研究型（或就业型）顺序，保持制式排版。
 不清楚或缺失的信息必须先让我人工核验。
@@ -34,6 +34,8 @@ $english-resume-skill-agent
 ![从材料到英文简历的六步横向流程，第三步为人工核验](docs/images/workflow-cn.svg)
 
 人工核验完成前，只能交付待核验草稿；Python 检查结构，不能代替事实确认。
+
+`agents/openai.yaml` 是 Codex 的 Skill 名称、展示和调用配置，不是独立 Agent。本项目是由 AI 工具执行的 Skill。
 
 ## 必要环境
 

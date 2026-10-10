@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/project-banner.svg" alt="English Resume Skill Agent" width="100%" />
+  <img src="docs/images/project-banner.svg" alt="English Resume Skill" width="100%" />
 </p>
 
 <p align="center">
@@ -17,12 +17,12 @@
 
 ## Quick start
 
-Download and extract the repository. Rename the complete folder to `english-resume-skill-agent` and install it in a host that supports Skills. For Codex, use `~/.agents/skills/` or your project's `.agents/skills/`. On Windows, use `<user profile>/.agents/skills/`.
+Download and extract the repository. Rename the complete folder to `english-resume-skill` and install it in a host that supports Skills. For Codex, use `~/.agents/skills/` or your project's `.agents/skills/`. On Windows, use `<user profile>/.agents/skills/`.
 
-Check the path: `.agents/skills/english-resume-skill-agent/SKILL.md`. Keep the entire folder, not just SKILL.md. Attach your materials and send:
+Check the path: `.agents/skills/english-resume-skill/SKILL.md`. Keep the entire folder, not just SKILL.md. Attach your materials and send:
 
 ```text
-$english-resume-skill-agent
+$english-resume-skill
 Create an English resume for my CS master's applications from my materials.
 Use the research (or professional) profile and preserve the fixed layout.
 Ask me to verify missing or unclear facts before final delivery.
@@ -33,6 +33,8 @@ Ask me to verify missing or unclear facts before final delivery.
 ![Six-step horizontal workflow with human verification before writing](docs/images/workflow-en.svg)
 
 Unresolved facts permit only a labelled draft. Python validates structure; it cannot verify factual truth.
+
+`agents/openai.yaml` contains Codex Skill display and invocation metadata, not an independent agent. This project is a Skill executed by your AI host.
 
 ## Requirements
 

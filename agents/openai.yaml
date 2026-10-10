@@ -1,6 +1,6 @@
 interface:
-  display_name: "English Resume Skill Agent"
+  display_name: "English Resume Skill"
   short_description: "Generate English resumes from your experience / 根据经历生成英文简历"
-  default_prompt: "Use $english-resume-skill-agent to draft my CS graduate application resume from my supplied facts."
+  default_prompt: "Use $english-resume-skill to draft my CS graduate application resume from my supplied facts."
 policy:
   allow_implicit_invocation: true
