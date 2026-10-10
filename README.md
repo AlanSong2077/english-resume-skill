@@ -3,89 +3,103 @@
 </p>
 
 <p align="center">
-  <strong>中文</strong> · <a href="README.en.md">English</a>
+  <strong>English</strong> · <a href="README.zh-CN.md">中文</a>
 </p>
 
 <p align="center">
-  <strong>将你的经历，写成清晰、可信、排版统一的英文简历。</strong><br />
-  用于 CS 及相关专业硕士申请，输出可编辑的 JSON、LaTeX 和 PDF。
+  <strong>Your experiences, turned into a clear and accurate English resume.</strong><br />
+  For CS and related master's applications. Editable JSON, LaTeX and PDF output.
 </p>
 
 <p align="center">
-  <a href="#快速使用">开始使用</a> · <a href="#使用流程">工作流程</a> · <a href="#四套成果展示">查看案例</a> · <a href="LICENSE">Apache-2.0</a>
+  <a href="#quick-start">Get started</a> · <a href="#workflow">Workflow</a> · <a href="#four-examples">Explore examples</a> · <a href="LICENSE">Apache-2.0</a>
 </p>
 
+## Quick start
 
-## 快速使用
+**Ask your Agent to install it with one sentence:**
 
-下载并解压仓库，将整个文件夹命名为 `english-resume-skill`，安装到支持 Skill 的工具中。Codex 用户可放到 `~/.agents/skills/`，或项目的 `.agents/skills/` 下；Windows 用户目录为 `<user profile>/.agents/skills/`。
+```text
+Install https://github.com/AlanSong2077/english-resume-skill.git as a user-level Skill for this agent, preserve the complete folder, and verify that english-resume-skill is discoverable before showing me how to invoke it.
+```
 
-确认目录为 `.agents/skills/english-resume-skill/SKILL.md`，不要只复制 SKILL.md。然后附上自己的材料，输入：
+Your Agent needs network access, file-writing permissions and a host that supports Skills. It should use that host's documented install directory, keep existing installations safe, and request required permissions. This installs the Skill; Python and a LaTeX compiler are separate output requirements.
+
+<details>
+<summary>Prefer to install manually?</summary>
+
+Download and extract the repository. Rename the complete folder to `english-resume-skill` and install it in a host that supports Skills. For Codex, use `~/.agents/skills/` or your project's `.agents/skills/`. On Windows, use `<user profile>/.agents/skills/`.
+
+Check the path: `.agents/skills/english-resume-skill/SKILL.md`. Keep the entire folder, not just SKILL.md. Reopen the host if needed and check its Skill selector for `english-resume-skill`.
+
+</details>
+
+**Once installed, attach your materials and send:**
 
 ```text
 $english-resume-skill
-请根据我的材料生成英文 CS 硕士申请简历。
-采用研究型（或就业型）顺序，保持制式排版。
-不清楚或缺失的信息必须先让我人工核验。
+Create an English resume for my CS master's applications from my materials.
+Use the research (or professional) profile and preserve the fixed layout.
+Ask me to verify missing or unclear facts before final delivery.
 ```
 
-## 使用流程
+## Workflow
 
-![从材料到英文简历的六步横向流程，第三步为人工核验](docs/images/workflow-cn.svg)
+![Six-step horizontal workflow with human verification before writing](docs/images/workflow-en.svg)
 
-人工核验完成前，只能交付待核验草稿；Python 检查结构，不能代替事实确认。
+Unresolved facts permit only a labelled draft. Python validates structure; it cannot verify factual truth.
 
-`agents/openai.yaml` 是 Codex 的 Skill 名称、展示和调用配置，不是独立 Agent。本项目是由 AI 工具执行的 Skill。
+`agents/openai.yaml` contains Codex Skill display and invocation metadata, not an independent agent. This project is a Skill executed by your AI host.
 
-## 必要环境
+## Requirements
 
-- 使用 Skill：需要支持 Skill 和文件执行的 AI 工具。
-- 生成 LaTeX：需要 [Python](https://www.python.org/downloads/)，无需 pip 包。
-- 生成 PDF：还需 LaTeX 编译器，例如 [MacTeX](https://tug.org/mactex/)、[MiKTeX](https://miktex.org/download) 或 [TeX Live](https://tug.org/texlive/)。
+- Skill workflow: an AI host with Skill support and file execution.
+- LaTeX output: [Python](https://www.python.org/downloads/), with no pip packages required.
+- PDF output: a LaTeX compiler, such as [MacTeX](https://tug.org/mactex/), [MiKTeX](https://miktex.org/download) or [TeX Live](https://tug.org/texlive/).
 
-已有 JSON 时，也可以在仓库根目录直接运行：
+If you already have JSON, run this from the repository root:
 
 ```bash
 python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/resume.tex --pdf
 ```
 
-没有编译器时去掉 `--pdf`；Windows 可用 `py -3` 替代 `python3`。更多字段与复现方法见 [字段说明](references/schema.md) 和 [DEMO 指南](examples/DEMO-GUIDE.md)。
+Omit `--pdf` without a compiler. On Windows, `py -3` can replace `python3`. See the [field reference](references/schema.md) and [demo guide](examples/DEMO-GUIDE.md) for details.
 
-## 案例
+## Cases
 
-以下均为两页人物、经历及数字均为虚构。
+People, experiences and numbers are invented.
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>机器学习与可靠 AI</h3>
-<p>研究型 · 校准、实验与复现</p>
-<a href="docs/images/01-research-ai.png"><img src="docs/images/01-research-ai.png" alt="机器学习与可靠 AI" width="100%" /></a>
+<h3>Machine learning &amp; reliable AI</h3>
+<p>Research · calibration, experiments, reproducibility</p>
+<a href="docs/images/01-research-ai.png"><img src="docs/images/01-research-ai.png" alt="Machine learning &amp; reliable AI" width="100%" /></a>
 <p><a href="examples/01-research-ai.pdf">PDF</a> · <a href="examples/01-research-ai.json">JSON</a></p>
 </td>
 <td width="50%" valign="top">
-<h3>数学转科学计算</h3>
-<p>研究型 · 数值方法与优化</p>
-<a href="docs/images/02-research-scientific-computing.png"><img src="docs/images/02-research-scientific-computing.png" alt="数学转科学计算" width="100%" /></a>
+<h3>Mathematics to scientific computing</h3>
+<p>Research · numerical methods and optimization</p>
+<a href="docs/images/02-research-scientific-computing.png"><img src="docs/images/02-research-scientific-computing.png" alt="Mathematics to scientific computing" width="100%" /></a>
 <p><a href="examples/02-research-scientific-computing.pdf">PDF</a> · <a href="examples/02-research-scientific-computing.json">JSON</a></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<h3>后端与分布式系统</h3>
-<p>就业型 · 服务、数据库与可靠性</p>
-<a href="docs/images/03-professional-backend.png"><img src="docs/images/03-professional-backend.png" alt="后端与分布式系统" width="100%" /></a>
+<h3>Backend &amp; distributed systems</h3>
+<p>Professional · services, databases, reliability</p>
+<a href="docs/images/03-professional-backend.png"><img src="docs/images/03-professional-backend.png" alt="Backend &amp; distributed systems" width="100%" /></a>
 <p><a href="examples/03-professional-backend.pdf">PDF</a> · <a href="examples/03-professional-backend.json">JSON</a></p>
 </td>
 <td width="50%" valign="top">
-<h3>移动端、HCI 与无障碍</h3>
-<p>就业型 · 性能、同步与用户体验</p>
-<a href="docs/images/04-professional-mobile.png"><img src="docs/images/04-professional-mobile.png" alt="移动端、HCI 与无障碍" width="100%" /></a>
+<h3>Mobile, HCI &amp; accessibility</h3>
+<p>Professional · performance, sync, usability</p>
+<a href="docs/images/04-professional-mobile.png"><img src="docs/images/04-professional-mobile.png" alt="Mobile, HCI &amp; accessibility" width="100%" /></a>
 <p><a href="examples/04-professional-mobile.pdf">PDF</a> · <a href="examples/04-professional-mobile.json">JSON</a></p>
 </td>
 </tr>
 </table>
 
-## 许可
+## License
 
-采用 [Apache-2.0](LICENSE)。欢迎提交 Issue 或改进建议。
+[Apache-2.0](LICENSE). Issues and improvements are welcome.
