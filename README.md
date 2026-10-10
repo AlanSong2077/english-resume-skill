@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <strong>Your experiences, turned into a clear and accurate English resume.</strong><br />
+  <strong>Your experiences, turned into a clear and accurate English resume. No manual formatting needed! Write freely! Edit freely!</strong><br />
   For CS and related master's applications. Editable JSON, LaTeX and PDF output.
 </p>
 
