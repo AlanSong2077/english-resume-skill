@@ -11,6 +11,10 @@
   用于 CS 及相关专业硕士申请，输出可编辑的 JSON、LaTeX 和 PDF。
 </p>
 
+<p align="center"> 
+  <strong>这款简历生成器已帮助许多人在申请多所大学时获得 OFFER. 包括 UIUC、佐治亚理工、UT Austin、威斯康星大学麦迪逊分校、利兹大学、南安普顿大学、利物浦大学、宾夕法尼亚大学、悉尼大学等众多院校！祝大家都能进入自己的梦校！</strong> 
+</p>
+
 <p align="center">
   <a href="#快速使用">开始使用</a> · <a href="#使用流程">工作流程</a> · <a href="#四套成果展示">查看案例</a> · <a href="LICENSE">Apache-2.0</a>
 </p>
