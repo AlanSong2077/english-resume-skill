@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <strong>This resume generator has helped many people receive OFFERs when applying to multiple universities, including UIUC, Georgia Tech, UT Austin, University of Wisconsin–Madison, University of Leeds, University of Southampton, University of Liverpool, UPenn, University of Sydney, and many others! Hope everyone gets into their dream school!<strong>
+  <strong>This resume generator has helped many people receive OFFERs when applying to multiple universities, including UIUC, Georgia Tech, UT Austin, University of Wisconsin–Madison, University of Leeds, University of Southampton, University of Liverpool, UPenn, University of Sydney, and many others! Hope everyone gets into their dream school!</strong>
 </p>
 
 
