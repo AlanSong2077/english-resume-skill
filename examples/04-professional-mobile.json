@@ -1,0 +1,138 @@
+{
+  "personal_info": {
+    "full_name": "Sofia Kim",
+    "email": "sofia.kim@example.com",
+    "phone": "+1 202-555-0147"
+  },
+  "profile": "professional",
+  "education": [
+    {
+      "institution": "Eastport Institute of Technology (Fictional)",
+      "degree": "BSc in Computer Science",
+      "date": "Sep. 2019 - Jun. 2023",
+      "location": "Seattle, WA",
+      "gpa": "3.72/4.00",
+      "courses": [
+        "HCI",
+        "Software Engineering",
+        "Mobile Computing",
+        "Statistics"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Brightway Health Technology (Fictional)",
+      "role": "Mobile Software Engineer",
+      "date": "Aug. 2023 - Sep. 2026",
+      "location": "Seattle, WA",
+      "description": [
+        "Built Android appointment and reminder features using Kotlin, Jetpack Compose and local persistence.",
+        "Reduced cold-start time from 2.8 s to 1.9 s on a fixed mid-range test device through lazy initialization.",
+        "Added offline request queues and explicit conflict resolution for interrupted network connections.",
+        "Worked with designers to improve screen-reader focus order and scalable-text layouts.",
+        "Instrumented startup phases and reported both median and p95 timings over 50 repeated cold starts.",
+        "Tested retry behavior after airplane-mode transitions and process recreation with unsent requests.",
+        "Added UI-state tests for loading, empty, offline and partially failed screens.",
+        "Wrote engineering notes on accessibility decisions and reviewed interactions with a screen-reader user."
+      ]
+    },
+    {
+      "company": "Fieldstone Digital (Fictional)",
+      "role": "Frontend Engineering Intern",
+      "date": "Jun. 2022 - Aug. 2022",
+      "location": "Remote",
+      "description": [
+        "Implemented accessible React forms with keyboard navigation and inline validation.",
+        "Added component tests and fixed layout issues across supported viewport sizes.",
+        "Collaborated with a designer to define visible focus states and readable error messages.",
+        "Built regression cases for narrow screens, zoom and lengthy translated labels.",
+        "Documented component behavior and added examples for future contributors."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Accessible Transit Companion",
+      "date": "2025 - 2026",
+      "tech": "Kotlin, Jetpack Compose, Room",
+      "url": "https://example.com/demos/transit-companion",
+      "description": [
+        "Built a transit-planning prototype with offline favorites and large-text navigation.",
+        "Ran moderated usability sessions with eight volunteers and revised three confusing interaction flows.",
+        "Created consent scripts and task scenarios for the eight usability sessions; anonymized observations.",
+        "Distinguished completion time, navigation errors and subjective feedback rather than merging them into one score.",
+        "Added persistent error states and recovery actions after participants struggled with network failures."
+      ]
+    },
+    {
+      "name": "Interface Accessibility Test Kit",
+      "date": "2024",
+      "tech": "TypeScript, React, Playwright",
+      "url": "https://example.com/demos/accessibility-kit",
+      "description": [
+        "Created repeatable keyboard and contrast checks for a sample component library.",
+        "Documented the limits of automated checks and a manual screen-reader review procedure.",
+        "Added checks for accessible names, focus restoration after dialogs and keyboard traps.",
+        "Created a sample report separating automatically detected failures from manual review items.",
+        "Documented false-positive scenarios and versioned the test fixtures with the component examples."
+      ]
+    },
+    {
+      "name": "Offline Notes Synchronization Prototype",
+      "date": "Jan. 2026 - Jun. 2026",
+      "tech": "Kotlin, Room, WorkManager, REST",
+      "url": "https://example.com/demos/offline-notes",
+      "description": [
+        "Built an offline-first notes app with persistent pending changes and background synchronization.",
+        "Defined merge rules for concurrent edits and exposed unresolved conflicts to the user.",
+        "Tested app termination, authentication expiry and interrupted uploads with repeatable fixtures.",
+        "Documented local encryption assumptions and excluded sensitive personal data from test records."
+      ]
+    },
+    {
+      "name": "Mobile Performance Benchmark Notebook",
+      "date": "2025",
+      "tech": "Kotlin, Android Benchmark, Python",
+      "url": "https://example.com/demos/mobile-performance-benchmark-notebook",
+      "description": [
+        "Created repeatable benchmark cases for startup, screen transitions and local database reads.",
+        "Recorded device model, operating-system version and thermal conditions with each test run.",
+        "Compared warm and cold starts and separated network delays from rendering costs.",
+        "Added plots of percentile timings and annotated regressions after dependency upgrades.",
+        "Documented why results from one device could not represent the entire user population."
+      ]
+    },
+    {
+      "name": "Inclusive Form Design Playground",
+      "date": "2026",
+      "tech": "TypeScript, React, Playwright",
+      "url": "https://example.com/demos/inclusive-form-design-playground",
+      "description": [
+        "Built sample forms with alternative validation timing, focus management and error announcements.",
+        "Tested keyboard-only completion, screen-reader reading order and long translated text.",
+        "Worked with two fictional designers to define acceptance criteria for recoverable form errors.",
+        "Recorded usability observations from six volunteers and separated preferences from demonstrated task failures.",
+        "Produced a checklist and examples illustrating when human accessibility review remains necessary."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Kotlin, TypeScript, Java, SQL",
+    "frameworks": "Jetpack Compose, React, Room, Playwright",
+    "systems": "Android Studio, Git, CI pipelines",
+    "specialties": "Mobile performance, offline synchronization, accessible interfaces"
+  },
+  "awards": [
+    {
+      "name": "Eastport Inclusive Design Challenge",
+      "year": "2023",
+      "description": "First place for an accessible campus navigation prototype."
+    },
+    {
+      "name": "Product Accessibility Contribution Recognition",
+      "year": "2026",
+      "description": "Recognized accessibility fixes and contributor documentation."
+    }
+  ]
+}

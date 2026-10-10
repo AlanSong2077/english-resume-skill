@@ -1,0 +1,114 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{headingcolor}{RGB}{0,51,102}
+\hypersetup{colorlinks=true,urlcolor=headingcolor}
+\titleformat{\section}{\large\bfseries\color{headingcolor}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\begin{document}
+\begin{center}
+{\Huge\bfseries Owen Patel}\\[6pt]
+{\small owen.patel@example.com \quad | \quad +1 202-555-0147}
+\end{center}
+\section{Education}
+\textbf{Westhaven College (Fictional)} \hfill \textit{Sep. 2021 - Jun. 2025}\\
+BSc in Applied Mathematics; Minor in Computing \hfill Manchester, UK\\
+\textit{GPA: 3.78/4.00}
+
+\textbf{Relevant Coursework:} Numerical Analysis, Optimization, Differential Equations, Data Structures
+\vspace{4pt}
+
+\section{Research Experience}
+\textbf{Research Assistant - Numerical Methods} \hfill \textit{Jan. 2025 - Sep. 2026}\\
+\textit{Westhaven Computational Science Group | Advisor: Dr. Priya Morgan}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Implemented finite-difference solvers for two-dimensional heat transport and checked convergence on analytic solutions.
+\item Compared conjugate-gradient and multigrid solvers over four grid resolutions with fixed stopping criteria.
+\item Measured a 2.1x runtime reduction for multigrid on the largest grid; reported setup cost and memory tradeoffs.
+\item Used manufactured solutions to validate boundary handling and estimate empirical convergence rates.
+\item Profiled sparse matrix assembly separately from iterative solution to identify where runtime improvements originated.
+\item Analyzed stopping tolerances, conditioning and residual error rather than treating speed as the only objective.
+\item Wrote a 24-page internal report describing discretization assumptions, numerical stability and reproducibility.
+\end{itemize}
+
+\textbf{Undergraduate Thesis - Optimization under Noise} \hfill \textit{Sep. 2024 - Jun. 2025}\\
+\textit{Westhaven Applied Mathematics Department | Advisor: Dr. Samuel Park}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Compared stochastic gradient and variance-reduction methods on synthetic convex objectives.
+\item Reported sensitivity to step size and noise over 30 independent runs; produced a departmental thesis.
+\item Derived baseline convergence expectations for smooth objectives and compared them with empirical trajectories.
+\item Performed controlled experiments on batch size and noise variance, recording function evaluations as well as iterations.
+\item Separated failed runs from successful runs and included sensitivity plots in the thesis appendix.
+\end{itemize}
+
+\section{Professional Experience}
+\textbf{Westhaven College} \hfill \textit{Sep. 2024 - May 2025}\\
+\textit{Numerical Methods Teaching Assistant} \hfill Manchester, UK
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Led weekly Python problem sessions and reviewed solver correctness for 40 students.
+\item Prepared exercises on floating-point error, iterative solvers and numerical differentiation.
+\item Used reference solutions and unit tests to help students diagnose indexing and boundary-condition errors.
+\item Maintained an anonymized issue log and revised examples after recurring misconceptions.
+\end{itemize}
+\vspace{4pt}
+
+\section{Selected Projects}
+\textbf{\href{https://example.com/demos/sparse-benchmarks}{Sparse Linear Algebra Benchmark Suite}} \hfill \textit{2025 - 2026}\\
+\textit{Python, SciPy, C++, CMake}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built benchmark scripts for runtime, residual error and memory use across sparse matrix families.
+\item Published reproducible instructions and checks against reference solutions in a demonstration repository.
+\item Included warm-up runs, repeated timing and explicit matrix sizes to reduce misleading benchmark comparisons.
+\item Recorded solver failures and nonconvergence alongside successful timings.
+\item Added a command-line interface and documented build flags, thread counts and reference tolerances.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/optimization-notebooks}{Optimization Learning Notebook Series}} \hfill \textit{Jun. 2025 - Dec. 2025}\\
+\textit{Python, Jupyter, NumPy, Matplotlib}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Created six teaching notebooks covering gradient methods, conditioning and constrained optimization.
+\item Used synthetic counterexamples to demonstrate unstable step sizes and misleading stopping criteria.
+\item Added reproducible figures and exercises comparing analytic and numerical gradients.
+\item Collected feedback from 12 classmates and revised explanations of convergence diagnostics.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/pde-solver-verification-lab}{PDE Solver Verification Lab}} \hfill \textit{2024}\\
+\textit{MATLAB, Python, NumPy}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Implemented explicit and implicit time-stepping methods for one-dimensional diffusion.
+\item Compared stability and error under controlled changes in grid spacing and timestep.
+\item Verified boundary conditions using manufactured solutions and conservation checks.
+\item Created plots distinguishing discretization error from floating-point effects.
+\item Prepared reproducible notebooks explaining assumptions to classmates without a numerical-analysis background.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/algorithmic-thinking-study-group}{Algorithmic Thinking Study Group}} \hfill \textit{2025}\\
+\textit{C++, Python, Git}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Organized an eight-week peer study group connecting mathematical proofs with executable algorithms.
+\item Implemented graph traversal, dynamic programming and sparse matrix examples with reference tests.
+\item Reviewed complexity arguments and documented differences between worst-case bounds and observed runtimes.
+\item Maintained a shared repository with reproducible exercises and contributor notes.
+\item Collected anonymous feedback and revised exercises that confused mathematical notation with implementation details.
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming Languages:} Python, C++, MATLAB
+
+\textbf{Frameworks \& Libraries:} NumPy, SciPy, Matplotlib
+
+\textbf{Systems \& Tools:} Linux, Git, CMake
+
+\textbf{Specializations:} Numerical linear algebra, optimization, scientific computing
+
+\section{Honors \& Awards}
+\textbf{Westhaven Mathematics Dissertation Prize} \hfill 2025 \textit{-- Recognized a reproducible experimental thesis.}
+
+\textbf{Computational Modeling Team Challenge} \hfill 2026 \textit{-- Second place in a fictional college team modeling competition.}
+\end{document}

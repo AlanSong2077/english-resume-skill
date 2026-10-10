@@ -1,0 +1,144 @@
+{
+  "personal_info": {
+    "full_name": "Maya Chen",
+    "email": "maya.chen@example.com",
+    "phone": "+1 202-555-0147"
+  },
+  "profile": "research",
+  "education": [
+    {
+      "institution": "Northbridge University (Fictional)",
+      "degree": "BSc in Computer Science",
+      "date": "Sep. 2022 - Jun. 2026",
+      "location": "Boston, MA",
+      "gpa": "3.91/4.00",
+      "courses": [
+        "Machine Learning",
+        "Algorithms",
+        "Probability",
+        "Linear Algebra"
+      ],
+      "ranking": "Top 5%"
+    }
+  ],
+  "research": [
+    {
+      "title": "Undergraduate Research Assistant - Robust Learning",
+      "date": "Sep. 2024 - Jun. 2026",
+      "lab": "Northbridge Reliable AI Lab",
+      "advisor": "Dr. Elena Brooks",
+      "description": [
+        "Implemented image-classification baselines in PyTorch and evaluated robustness under distribution shifts.",
+        "Compared augmentation and calibration methods across 12 corruption settings using five random seeds.",
+        "Reduced expected calibration error from 8.4% to 5.1% on the held-out evaluation split.",
+        "Defined corruption severity groups and kept preprocessing, checkpoints and inference settings fixed across comparisons.",
+        "Conducted ablations on label smoothing, augmentation strength and temperature scaling to separate their effects.",
+        "Reported clean-data accuracy alongside robustness metrics to make accuracy-calibration tradeoffs explicit.",
+        "Wrote data-loading tests and saved configurations, environment versions and seed-level results for replication."
+      ]
+    },
+    {
+      "title": "Summer Research Student - Dataset Quality",
+      "date": "Jun. 2024 - Aug. 2024",
+      "lab": "Northbridge Data Science Center",
+      "advisor": "Dr. Daniel Reed",
+      "description": [
+        "Audited 18,000 labels and documented annotation disagreements in an internal research report.",
+        "Created stratified data splits and leakage checks for reproducible model comparison.",
+        "Designed an annotation review protocol covering ambiguous labels, near-duplicates and class imbalance.",
+        "Reviewed disagreements with two student annotators and recorded decisions without overwriting the original labels.",
+        "Compared class distributions before and after filtering and identified categories with insufficient coverage."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Cedar Analytics (Fictional)",
+      "role": "Machine Learning Intern",
+      "date": "Jun. 2025 - Aug. 2025",
+      "location": "Remote",
+      "description": [
+        "Built feature-validation checks and experiment summaries for an internal demand-forecasting prototype.",
+        "Implemented time-based validation and compared seasonal baselines before testing tree-based forecasting models.",
+        "Investigated missing values, delayed records and feature drift, documenting risks for deployment.",
+        "Prepared a handover notebook explaining evaluation assumptions and limitations to the engineering team."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Experiment Reproducibility Toolkit",
+      "date": "2025",
+      "tech": "Python, PyTorch, YAML, Git",
+      "url": "https://example.com/demos/reproducibility",
+      "description": [
+        "Built configuration-based runners, seed tracking and aggregated confidence-interval reports.",
+        "Documented benchmark setup and added tests for split integrity and missing metrics.",
+        "Added resumable execution and explicit failure records to avoid silently excluding unsuccessful experiments.",
+        "Created a tutorial with a small synthetic dataset and a worked example of interpreting uncertainty.",
+        "Separated dataset configuration from training code and checked repeated runs for consistent split membership."
+      ]
+    },
+    {
+      "name": "Calibration Diagnostics Dashboard",
+      "date": "Jan. 2026 - May 2026",
+      "tech": "Python, Streamlit, pandas, Plotly",
+      "url": "https://example.com/demos/calibration-dashboard",
+      "description": [
+        "Built reliability diagrams and class-level error summaries from saved prediction files.",
+        "Added subgroup filters and displayed sample sizes to discourage conclusions from sparse categories.",
+        "Compared expected calibration error under multiple binning schemes and documented estimator sensitivity.",
+        "Wrote tests for malformed probability vectors, missing labels and classes absent from the evaluation split."
+      ]
+    },
+    {
+      "name": "Small-Data Learning Study",
+      "date": "2024",
+      "tech": "Python, PyTorch, scikit-learn",
+      "url": "https://example.com/demos/small-data-learning-study",
+      "description": [
+        "Designed a course study comparing linear models, shallow networks and pretrained representations under restricted label budgets.",
+        "Evaluated five training-set sizes with fixed class balance and repeated subsampling.",
+        "Compared validation-based model selection with a deliberately overfit baseline to demonstrate evaluation leakage.",
+        "Recorded compute time and parameter count alongside classification accuracy.",
+        "Wrote a project report explaining why gains on one dataset did not establish general superiority."
+      ]
+    },
+    {
+      "name": "Model Error Review Workspace",
+      "date": "2025",
+      "tech": "Python, SQLite, pandas",
+      "url": "https://example.com/demos/model-error-review-workspace",
+      "description": [
+        "Built a local workspace for reviewing misclassified examples and grouping errors by category.",
+        "Designed an annotation table retaining model version, confidence, review decision and reviewer notes.",
+        "Added export checks to prevent duplicate examples from entering both training and evaluation collections.",
+        "Analyzed error clusters with the research team and proposed targeted data-review tasks.",
+        "Documented that qualitative error categories were exploratory and required independent validation."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Python, C++, SQL",
+    "frameworks": "PyTorch, NumPy, pandas, scikit-learn",
+    "systems": "Linux, Git, Docker",
+    "specialties": "Robust learning, experiment design, model calibration"
+  },
+  "awards": [
+    {
+      "name": "Northbridge Undergraduate Research Scholarship",
+      "year": "2025",
+      "description": "Supported a year-long independent research project."
+    },
+    {
+      "name": "Faculty Academic Excellence Award",
+      "year": "2024",
+      "description": "Recognized performance in mathematics and computing."
+    },
+    {
+      "name": "Research Poster Presentation Commendation",
+      "year": "2026",
+      "description": "Recognized a clear presentation of methods and experimental limitations."
+    }
+  ]
+}

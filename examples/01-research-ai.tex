@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{headingcolor}{RGB}{0,51,102}
+\hypersetup{colorlinks=true,urlcolor=headingcolor}
+\titleformat{\section}{\large\bfseries\color{headingcolor}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\begin{document}
+\begin{center}
+{\Huge\bfseries Maya Chen}\\[6pt]
+{\small maya.chen@example.com \quad | \quad +1 202-555-0147}
+\end{center}
+\section{Education}
+\textbf{Northbridge University (Fictional)} \hfill \textit{Sep. 2022 - Jun. 2026}\\
+BSc in Computer Science \hfill Boston, MA\\
+\textit{GPA: 3.91/4.00, Class Ranking: Top 5\%}
+
+\textbf{Relevant Coursework:} Machine Learning, Algorithms, Probability, Linear Algebra
+\vspace{4pt}
+
+\section{Research Experience}
+\textbf{Undergraduate Research Assistant - Robust Learning} \hfill \textit{Sep. 2024 - Jun. 2026}\\
+\textit{Northbridge Reliable AI Lab | Advisor: Dr. Elena Brooks}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Implemented image-classification baselines in PyTorch and evaluated robustness under distribution shifts.
+\item Compared augmentation and calibration methods across 12 corruption settings using five random seeds.
+\item Reduced expected calibration error from 8.4\% to 5.1\% on the held-out evaluation split.
+\item Defined corruption severity groups and kept preprocessing, checkpoints and inference settings fixed across comparisons.
+\item Conducted ablations on label smoothing, augmentation strength and temperature scaling to separate their effects.
+\item Reported clean-data accuracy alongside robustness metrics to make accuracy-calibration tradeoffs explicit.
+\item Wrote data-loading tests and saved configurations, environment versions and seed-level results for replication.
+\end{itemize}
+
+\textbf{Summer Research Student - Dataset Quality} \hfill \textit{Jun. 2024 - Aug. 2024}\\
+\textit{Northbridge Data Science Center | Advisor: Dr. Daniel Reed}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Audited 18,000 labels and documented annotation disagreements in an internal research report.
+\item Created stratified data splits and leakage checks for reproducible model comparison.
+\item Designed an annotation review protocol covering ambiguous labels, near-duplicates and class imbalance.
+\item Reviewed disagreements with two student annotators and recorded decisions without overwriting the original labels.
+\item Compared class distributions before and after filtering and identified categories with insufficient coverage.
+\end{itemize}
+
+\section{Professional Experience}
+\textbf{Cedar Analytics (Fictional)} \hfill \textit{Jun. 2025 - Aug. 2025}\\
+\textit{Machine Learning Intern} \hfill Remote
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built feature-validation checks and experiment summaries for an internal demand-forecasting prototype.
+\item Implemented time-based validation and compared seasonal baselines before testing tree-based forecasting models.
+\item Investigated missing values, delayed records and feature drift, documenting risks for deployment.
+\item Prepared a handover notebook explaining evaluation assumptions and limitations to the engineering team.
+\end{itemize}
+\vspace{4pt}
+
+\section{Selected Projects}
+\textbf{\href{https://example.com/demos/reproducibility}{Experiment Reproducibility Toolkit}} \hfill \textit{2025}\\
+\textit{Python, PyTorch, YAML, Git}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built configuration-based runners, seed tracking and aggregated confidence-interval reports.
+\item Documented benchmark setup and added tests for split integrity and missing metrics.
+\item Added resumable execution and explicit failure records to avoid silently excluding unsuccessful experiments.
+\item Created a tutorial with a small synthetic dataset and a worked example of interpreting uncertainty.
+\item Separated dataset configuration from training code and checked repeated runs for consistent split membership.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/calibration-dashboard}{Calibration Diagnostics Dashboard}} \hfill \textit{Jan. 2026 - May 2026}\\
+\textit{Python, Streamlit, pandas, Plotly}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built reliability diagrams and class-level error summaries from saved prediction files.
+\item Added subgroup filters and displayed sample sizes to discourage conclusions from sparse categories.
+\item Compared expected calibration error under multiple binning schemes and documented estimator sensitivity.
+\item Wrote tests for malformed probability vectors, missing labels and classes absent from the evaluation split.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/small-data-learning-study}{Small-Data Learning Study}} \hfill \textit{2024}\\
+\textit{Python, PyTorch, scikit-learn}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Designed a course study comparing linear models, shallow networks and pretrained representations under restricted label budgets.
+\item Evaluated five training-set sizes with fixed class balance and repeated subsampling.
+\item Compared validation-based model selection with a deliberately overfit baseline to demonstrate evaluation leakage.
+\item Recorded compute time and parameter count alongside classification accuracy.
+\item Wrote a project report explaining why gains on one dataset did not establish general superiority.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/model-error-review-workspace}{Model Error Review Workspace}} \hfill \textit{2025}\\
+\textit{Python, SQLite, pandas}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built a local workspace for reviewing misclassified examples and grouping errors by category.
+\item Designed an annotation table retaining model version, confidence, review decision and reviewer notes.
+\item Added export checks to prevent duplicate examples from entering both training and evaluation collections.
+\item Analyzed error clusters with the research team and proposed targeted data-review tasks.
+\item Documented that qualitative error categories were exploratory and required independent validation.
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming Languages:} Python, C++, SQL
+
+\textbf{Frameworks \& Libraries:} PyTorch, NumPy, pandas, scikit-learn
+
+\textbf{Systems \& Tools:} Linux, Git, Docker
+
+\textbf{Specializations:} Robust learning, experiment design, model calibration
+
+\section{Honors \& Awards}
+\textbf{Northbridge Undergraduate Research Scholarship} \hfill 2025 \textit{-- Supported a year-long independent research project.}
+
+\textbf{Faculty Academic Excellence Award} \hfill 2024 \textit{-- Recognized performance in mathematics and computing.}
+
+\textbf{Research Poster Presentation Commendation} \hfill 2026 \textit{-- Recognized a clear presentation of methods and experimental limitations.}
+\end{document}

@@ -1,0 +1,137 @@
+{
+  "personal_info": {
+    "full_name": "Daniel Rivera",
+    "email": "daniel.rivera@example.com",
+    "phone": "+1 202-555-0147"
+  },
+  "profile": "professional",
+  "education": [
+    {
+      "institution": "Lakeside Technical University (Fictional)",
+      "degree": "BEng in Software Engineering",
+      "date": "Sep. 2018 - Jun. 2022",
+      "location": "Austin, TX",
+      "gpa": "3.64/4.00",
+      "courses": [
+        "Databases",
+        "Operating Systems",
+        "Distributed Systems",
+        "Computer Networks"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Harbor Commerce (Fictional)",
+      "role": "Backend Software Engineer",
+      "date": "Jul. 2022 - Sep. 2026",
+      "location": "Austin, TX",
+      "description": [
+        "Implemented Java services for order processing, payment-state reconciliation and inventory reservations.",
+        "Reduced p95 API latency from 420 ms to 240 ms in staging through query plans, indexing and bounded caching.",
+        "Added idempotency keys and transactional outbox processing; tested retries and duplicate event delivery.",
+        "Coordinated a three-engineer migration and wrote runbooks for rollback, alerts and incident response.",
+        "Designed explicit order-state transitions and rejected invalid updates before database writes.",
+        "Introduced bounded connection pools and measured behavior under sustained load and downstream timeouts.",
+        "Reviewed schema changes for compatibility with older service versions during rolling deployment.",
+        "Investigated two staging incidents involving retry storms; added limits and dashboards for queue growth."
+      ]
+    },
+    {
+      "company": "Clearpath Systems (Fictional)",
+      "role": "Software Engineering Intern",
+      "date": "Jun. 2021 - Aug. 2021",
+      "location": "Remote",
+      "description": [
+        "Built REST endpoints and integration tests for a small business scheduling application.",
+        "Added structured logging and documented error handling for client integrations.",
+        "Worked with a product manager to translate scheduling rules into API acceptance criteria.",
+        "Used database fixtures to test timezone boundaries, conflicting reservations and cancellation races.",
+        "Presented a handover demo and documented setup instructions for the next intern."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Reliable Task Queue",
+      "date": "2024 - 2025",
+      "tech": "Go, Redis, Docker",
+      "url": "https://example.com/demos/task-queue",
+      "description": [
+        "Implemented worker leases, exponential backoff and dead-letter queues with documented delivery semantics.",
+        "Benchmarked 1,500 jobs per second on a four-worker local setup; included hardware and payload details.",
+        "Implemented graceful worker shutdown and tested lease expiry after forced process termination.",
+        "Compared throughput and tail latency across different payload sizes and worker counts.",
+        "Documented the absence of exactly-once execution and recommended idempotent job handlers."
+      ]
+    },
+    {
+      "name": "Database Migration Guard",
+      "date": "2023",
+      "tech": "Python, PostgreSQL, GitHub Actions",
+      "url": "https://example.com/demos/migration-guard",
+      "description": [
+        "Built checks for migration ordering, destructive changes and backward compatibility in CI.",
+        "Validated migration history against a clean database and a snapshot representing the previous release.",
+        "Added a review checklist for long-running locks, backfills and rollback feasibility.",
+        "Produced machine-readable CI summaries to help reviewers identify risky statements."
+      ]
+    },
+    {
+      "name": "Service Load and Failure Harness",
+      "date": "Jan. 2026 - Jun. 2026",
+      "tech": "Go, Docker Compose, Prometheus",
+      "url": "https://example.com/demos/load-harness",
+      "description": [
+        "Created repeatable traffic scenarios with burst loads, downstream delays and partial dependency failures.",
+        "Recorded throughput, p95 latency, error rate and resource utilization under each scenario.",
+        "Implemented warm-up periods and reproducible configuration files for fair before/after comparisons.",
+        "Documented benchmark limits and avoided presenting local test throughput as production capacity."
+      ]
+    },
+    {
+      "name": "Order State Simulation Sandbox",
+      "date": "2025",
+      "tech": "Java, PostgreSQL, JUnit",
+      "url": "https://example.com/demos/order-state-simulation-sandbox",
+      "description": [
+        "Created a sandbox that replays order events under delayed, duplicated and out-of-order delivery.",
+        "Defined invariant checks for reservation counts, cancellation states and reconciliation records.",
+        "Compared compensating actions with database transactions in isolated failure scenarios.",
+        "Added deterministic seeds and replayable event traces to reproduce failed tests.",
+        "Documented which assumptions depended on external payment systems and could not be verified locally."
+      ]
+    },
+    {
+      "name": "Incident Review Knowledge Base",
+      "date": "2026",
+      "tech": "Python, Markdown, Git",
+      "url": "https://example.com/demos/incident-review-knowledge-base",
+      "description": [
+        "Built searchable summaries of synthetic incidents for practicing operational analysis.",
+        "Structured records around trigger, detection, customer impact, mitigation and preventive follow-up.",
+        "Added consistency checks for timestamps and links to runbook sections.",
+        "Led two fictional team exercises comparing escalation decisions during simulated service failures.",
+        "Published a contributor guide emphasizing reproducible evidence and blameless incident descriptions."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Java, Go, Python, SQL",
+    "frameworks": "Spring Boot, JUnit",
+    "systems": "PostgreSQL, Redis, Docker, Linux, Git",
+    "specialties": "Backend services, transactional consistency, observability"
+  },
+  "awards": [
+    {
+      "name": "Harbor Engineering Quality Award",
+      "year": "2025",
+      "description": "Recognized incident reduction and migration documentation."
+    },
+    {
+      "name": "Internal Reliability Improvement Recognition",
+      "year": "2026",
+      "description": "Recognized documented failure testing and operational handover."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "personal_info": {"full_name": "Example Applicant", "email": "applicant@example.com"},
+  "profile": "professional",
+  "education": [{"institution": "Example University", "degree": "BSc in Computer Science"}],
+  "projects": [{"name": "Course Project", "tech": "Python", "description": ["Implemented the supplied course specification using Python."]}],
+  "skills": {"languages": "Python"}
+}

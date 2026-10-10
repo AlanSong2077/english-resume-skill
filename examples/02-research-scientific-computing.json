@@ -1,0 +1,138 @@
+{
+  "personal_info": {
+    "full_name": "Owen Patel",
+    "email": "owen.patel@example.com",
+    "phone": "+1 202-555-0147"
+  },
+  "profile": "research",
+  "education": [
+    {
+      "institution": "Westhaven College (Fictional)",
+      "degree": "BSc in Applied Mathematics; Minor in Computing",
+      "date": "Sep. 2021 - Jun. 2025",
+      "location": "Manchester, UK",
+      "gpa": "3.78/4.00",
+      "courses": [
+        "Numerical Analysis",
+        "Optimization",
+        "Differential Equations",
+        "Data Structures"
+      ]
+    }
+  ],
+  "research": [
+    {
+      "title": "Research Assistant - Numerical Methods",
+      "date": "Jan. 2025 - Sep. 2026",
+      "lab": "Westhaven Computational Science Group",
+      "advisor": "Dr. Priya Morgan",
+      "description": [
+        "Implemented finite-difference solvers for two-dimensional heat transport and checked convergence on analytic solutions.",
+        "Compared conjugate-gradient and multigrid solvers over four grid resolutions with fixed stopping criteria.",
+        "Measured a 2.1x runtime reduction for multigrid on the largest grid; reported setup cost and memory tradeoffs.",
+        "Used manufactured solutions to validate boundary handling and estimate empirical convergence rates.",
+        "Profiled sparse matrix assembly separately from iterative solution to identify where runtime improvements originated.",
+        "Analyzed stopping tolerances, conditioning and residual error rather than treating speed as the only objective.",
+        "Wrote a 24-page internal report describing discretization assumptions, numerical stability and reproducibility."
+      ]
+    },
+    {
+      "title": "Undergraduate Thesis - Optimization under Noise",
+      "date": "Sep. 2024 - Jun. 2025",
+      "lab": "Westhaven Applied Mathematics Department",
+      "advisor": "Dr. Samuel Park",
+      "description": [
+        "Compared stochastic gradient and variance-reduction methods on synthetic convex objectives.",
+        "Reported sensitivity to step size and noise over 30 independent runs; produced a departmental thesis.",
+        "Derived baseline convergence expectations for smooth objectives and compared them with empirical trajectories.",
+        "Performed controlled experiments on batch size and noise variance, recording function evaluations as well as iterations.",
+        "Separated failed runs from successful runs and included sensitivity plots in the thesis appendix."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Westhaven College",
+      "role": "Numerical Methods Teaching Assistant",
+      "date": "Sep. 2024 - May 2025",
+      "location": "Manchester, UK",
+      "description": [
+        "Led weekly Python problem sessions and reviewed solver correctness for 40 students.",
+        "Prepared exercises on floating-point error, iterative solvers and numerical differentiation.",
+        "Used reference solutions and unit tests to help students diagnose indexing and boundary-condition errors.",
+        "Maintained an anonymized issue log and revised examples after recurring misconceptions."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sparse Linear Algebra Benchmark Suite",
+      "date": "2025 - 2026",
+      "tech": "Python, SciPy, C++, CMake",
+      "url": "https://example.com/demos/sparse-benchmarks",
+      "description": [
+        "Built benchmark scripts for runtime, residual error and memory use across sparse matrix families.",
+        "Published reproducible instructions and checks against reference solutions in a demonstration repository.",
+        "Included warm-up runs, repeated timing and explicit matrix sizes to reduce misleading benchmark comparisons.",
+        "Recorded solver failures and nonconvergence alongside successful timings.",
+        "Added a command-line interface and documented build flags, thread counts and reference tolerances."
+      ]
+    },
+    {
+      "name": "Optimization Learning Notebook Series",
+      "date": "Jun. 2025 - Dec. 2025",
+      "tech": "Python, Jupyter, NumPy, Matplotlib",
+      "url": "https://example.com/demos/optimization-notebooks",
+      "description": [
+        "Created six teaching notebooks covering gradient methods, conditioning and constrained optimization.",
+        "Used synthetic counterexamples to demonstrate unstable step sizes and misleading stopping criteria.",
+        "Added reproducible figures and exercises comparing analytic and numerical gradients.",
+        "Collected feedback from 12 classmates and revised explanations of convergence diagnostics."
+      ]
+    },
+    {
+      "name": "PDE Solver Verification Lab",
+      "date": "2024",
+      "tech": "MATLAB, Python, NumPy",
+      "url": "https://example.com/demos/pde-solver-verification-lab",
+      "description": [
+        "Implemented explicit and implicit time-stepping methods for one-dimensional diffusion.",
+        "Compared stability and error under controlled changes in grid spacing and timestep.",
+        "Verified boundary conditions using manufactured solutions and conservation checks.",
+        "Created plots distinguishing discretization error from floating-point effects.",
+        "Prepared reproducible notebooks explaining assumptions to classmates without a numerical-analysis background."
+      ]
+    },
+    {
+      "name": "Algorithmic Thinking Study Group",
+      "date": "2025",
+      "tech": "C++, Python, Git",
+      "url": "https://example.com/demos/algorithmic-thinking-study-group",
+      "description": [
+        "Organized an eight-week peer study group connecting mathematical proofs with executable algorithms.",
+        "Implemented graph traversal, dynamic programming and sparse matrix examples with reference tests.",
+        "Reviewed complexity arguments and documented differences between worst-case bounds and observed runtimes.",
+        "Maintained a shared repository with reproducible exercises and contributor notes.",
+        "Collected anonymous feedback and revised exercises that confused mathematical notation with implementation details."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": "Python, C++, MATLAB",
+    "frameworks": "NumPy, SciPy, Matplotlib",
+    "systems": "Linux, Git, CMake",
+    "specialties": "Numerical linear algebra, optimization, scientific computing"
+  },
+  "awards": [
+    {
+      "name": "Westhaven Mathematics Dissertation Prize",
+      "year": "2025",
+      "description": "Recognized a reproducible experimental thesis."
+    },
+    {
+      "name": "Computational Modeling Team Challenge",
+      "year": "2026",
+      "description": "Second place in a fictional college team modeling competition."
+    }
+  ]
+}

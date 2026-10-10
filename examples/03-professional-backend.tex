@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{headingcolor}{RGB}{0,51,102}
+\hypersetup{colorlinks=true,urlcolor=headingcolor}
+\titleformat{\section}{\large\bfseries\color{headingcolor}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\begin{document}
+\begin{center}
+{\Huge\bfseries Daniel Rivera}\\[6pt]
+{\small daniel.rivera@example.com \quad | \quad +1 202-555-0147}
+\end{center}
+\section{Education}
+\textbf{Lakeside Technical University (Fictional)} \hfill \textit{Sep. 2018 - Jun. 2022}\\
+BEng in Software Engineering \hfill Austin, TX\\
+\textit{GPA: 3.64/4.00}
+
+\textbf{Relevant Coursework:} Databases, Operating Systems, Distributed Systems, Computer Networks
+\vspace{4pt}
+
+\section{Professional Experience}
+\textbf{Harbor Commerce (Fictional)} \hfill \textit{Jul. 2022 - Sep. 2026}\\
+\textit{Backend Software Engineer} \hfill Austin, TX
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Implemented Java services for order processing, payment-state reconciliation and inventory reservations.
+\item Reduced p95 API latency from 420 ms to 240 ms in staging through query plans, indexing and bounded caching.
+\item Added idempotency keys and transactional outbox processing; tested retries and duplicate event delivery.
+\item Coordinated a three-engineer migration and wrote runbooks for rollback, alerts and incident response.
+\item Designed explicit order-state transitions and rejected invalid updates before database writes.
+\item Introduced bounded connection pools and measured behavior under sustained load and downstream timeouts.
+\item Reviewed schema changes for compatibility with older service versions during rolling deployment.
+\item Investigated two staging incidents involving retry storms; added limits and dashboards for queue growth.
+\end{itemize}
+\vspace{4pt}
+
+\textbf{Clearpath Systems (Fictional)} \hfill \textit{Jun. 2021 - Aug. 2021}\\
+\textit{Software Engineering Intern} \hfill Remote
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built REST endpoints and integration tests for a small business scheduling application.
+\item Added structured logging and documented error handling for client integrations.
+\item Worked with a product manager to translate scheduling rules into API acceptance criteria.
+\item Used database fixtures to test timezone boundaries, conflicting reservations and cancellation races.
+\item Presented a handover demo and documented setup instructions for the next intern.
+\end{itemize}
+\vspace{4pt}
+
+\section{Selected Projects}
+\textbf{\href{https://example.com/demos/task-queue}{Reliable Task Queue}} \hfill \textit{2024 - 2025}\\
+\textit{Go, Redis, Docker}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Implemented worker leases, exponential backoff and dead-letter queues with documented delivery semantics.
+\item Benchmarked 1,500 jobs per second on a four-worker local setup; included hardware and payload details.
+\item Implemented graceful worker shutdown and tested lease expiry after forced process termination.
+\item Compared throughput and tail latency across different payload sizes and worker counts.
+\item Documented the absence of exactly-once execution and recommended idempotent job handlers.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/migration-guard}{Database Migration Guard}} \hfill \textit{2023}\\
+\textit{Python, PostgreSQL, GitHub Actions}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built checks for migration ordering, destructive changes and backward compatibility in CI.
+\item Validated migration history against a clean database and a snapshot representing the previous release.
+\item Added a review checklist for long-running locks, backfills and rollback feasibility.
+\item Produced machine-readable CI summaries to help reviewers identify risky statements.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/load-harness}{Service Load and Failure Harness}} \hfill \textit{Jan. 2026 - Jun. 2026}\\
+\textit{Go, Docker Compose, Prometheus}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Created repeatable traffic scenarios with burst loads, downstream delays and partial dependency failures.
+\item Recorded throughput, p95 latency, error rate and resource utilization under each scenario.
+\item Implemented warm-up periods and reproducible configuration files for fair before/after comparisons.
+\item Documented benchmark limits and avoided presenting local test throughput as production capacity.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/order-state-simulation-sandbox}{Order State Simulation Sandbox}} \hfill \textit{2025}\\
+\textit{Java, PostgreSQL, JUnit}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Created a sandbox that replays order events under delayed, duplicated and out-of-order delivery.
+\item Defined invariant checks for reservation counts, cancellation states and reconciliation records.
+\item Compared compensating actions with database transactions in isolated failure scenarios.
+\item Added deterministic seeds and replayable event traces to reproduce failed tests.
+\item Documented which assumptions depended on external payment systems and could not be verified locally.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/incident-review-knowledge-base}{Incident Review Knowledge Base}} \hfill \textit{2026}\\
+\textit{Python, Markdown, Git}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built searchable summaries of synthetic incidents for practicing operational analysis.
+\item Structured records around trigger, detection, customer impact, mitigation and preventive follow-up.
+\item Added consistency checks for timestamps and links to runbook sections.
+\item Led two fictional team exercises comparing escalation decisions during simulated service failures.
+\item Published a contributor guide emphasizing reproducible evidence and blameless incident descriptions.
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming Languages:} Java, Go, Python, SQL
+
+\textbf{Frameworks \& Libraries:} Spring Boot, JUnit
+
+\textbf{Systems \& Tools:} PostgreSQL, Redis, Docker, Linux, Git
+
+\textbf{Specializations:} Backend services, transactional consistency, observability
+
+\section{Honors \& Awards}
+\textbf{Harbor Engineering Quality Award} \hfill 2025 \textit{-- Recognized incident reduction and migration documentation.}
+
+\textbf{Internal Reliability Improvement Recognition} \hfill 2026 \textit{-- Recognized documented failure testing and operational handover.}
+\end{document}

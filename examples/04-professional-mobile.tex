@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{headingcolor}{RGB}{0,51,102}
+\hypersetup{colorlinks=true,urlcolor=headingcolor}
+\titleformat{\section}{\large\bfseries\color{headingcolor}}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\begin{document}
+\begin{center}
+{\Huge\bfseries Sofia Kim}\\[6pt]
+{\small sofia.kim@example.com \quad | \quad +1 202-555-0147}
+\end{center}
+\section{Education}
+\textbf{Eastport Institute of Technology (Fictional)} \hfill \textit{Sep. 2019 - Jun. 2023}\\
+BSc in Computer Science \hfill Seattle, WA\\
+\textit{GPA: 3.72/4.00}
+
+\textbf{Relevant Coursework:} HCI, Software Engineering, Mobile Computing, Statistics
+\vspace{4pt}
+
+\section{Professional Experience}
+\textbf{Brightway Health Technology (Fictional)} \hfill \textit{Aug. 2023 - Sep. 2026}\\
+\textit{Mobile Software Engineer} \hfill Seattle, WA
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built Android appointment and reminder features using Kotlin, Jetpack Compose and local persistence.
+\item Reduced cold-start time from 2.8 s to 1.9 s on a fixed mid-range test device through lazy initialization.
+\item Added offline request queues and explicit conflict resolution for interrupted network connections.
+\item Worked with designers to improve screen-reader focus order and scalable-text layouts.
+\item Instrumented startup phases and reported both median and p95 timings over 50 repeated cold starts.
+\item Tested retry behavior after airplane-mode transitions and process recreation with unsent requests.
+\item Added UI-state tests for loading, empty, offline and partially failed screens.
+\item Wrote engineering notes on accessibility decisions and reviewed interactions with a screen-reader user.
+\end{itemize}
+\vspace{4pt}
+
+\textbf{Fieldstone Digital (Fictional)} \hfill \textit{Jun. 2022 - Aug. 2022}\\
+\textit{Frontend Engineering Intern} \hfill Remote
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Implemented accessible React forms with keyboard navigation and inline validation.
+\item Added component tests and fixed layout issues across supported viewport sizes.
+\item Collaborated with a designer to define visible focus states and readable error messages.
+\item Built regression cases for narrow screens, zoom and lengthy translated labels.
+\item Documented component behavior and added examples for future contributors.
+\end{itemize}
+\vspace{4pt}
+
+\section{Selected Projects}
+\textbf{\href{https://example.com/demos/transit-companion}{Accessible Transit Companion}} \hfill \textit{2025 - 2026}\\
+\textit{Kotlin, Jetpack Compose, Room}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built a transit-planning prototype with offline favorites and large-text navigation.
+\item Ran moderated usability sessions with eight volunteers and revised three confusing interaction flows.
+\item Created consent scripts and task scenarios for the eight usability sessions; anonymized observations.
+\item Distinguished completion time, navigation errors and subjective feedback rather than merging them into one score.
+\item Added persistent error states and recovery actions after participants struggled with network failures.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/accessibility-kit}{Interface Accessibility Test Kit}} \hfill \textit{2024}\\
+\textit{TypeScript, React, Playwright}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Created repeatable keyboard and contrast checks for a sample component library.
+\item Documented the limits of automated checks and a manual screen-reader review procedure.
+\item Added checks for accessible names, focus restoration after dialogs and keyboard traps.
+\item Created a sample report separating automatically detected failures from manual review items.
+\item Documented false-positive scenarios and versioned the test fixtures with the component examples.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/offline-notes}{Offline Notes Synchronization Prototype}} \hfill \textit{Jan. 2026 - Jun. 2026}\\
+\textit{Kotlin, Room, WorkManager, REST}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built an offline-first notes app with persistent pending changes and background synchronization.
+\item Defined merge rules for concurrent edits and exposed unresolved conflicts to the user.
+\item Tested app termination, authentication expiry and interrupted uploads with repeatable fixtures.
+\item Documented local encryption assumptions and excluded sensitive personal data from test records.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/mobile-performance-benchmark-notebook}{Mobile Performance Benchmark Notebook}} \hfill \textit{2025}\\
+\textit{Kotlin, Android Benchmark, Python}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Created repeatable benchmark cases for startup, screen transitions and local database reads.
+\item Recorded device model, operating-system version and thermal conditions with each test run.
+\item Compared warm and cold starts and separated network delays from rendering costs.
+\item Added plots of percentile timings and annotated regressions after dependency upgrades.
+\item Documented why results from one device could not represent the entire user population.
+\end{itemize}
+
+\textbf{\href{https://example.com/demos/inclusive-form-design-playground}{Inclusive Form Design Playground}} \hfill \textit{2026}\\
+\textit{TypeScript, React, Playwright}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=2pt]
+\item Built sample forms with alternative validation timing, focus management and error announcements.
+\item Tested keyboard-only completion, screen-reader reading order and long translated text.
+\item Worked with two fictional designers to define acceptance criteria for recoverable form errors.
+\item Recorded usability observations from six volunteers and separated preferences from demonstrated task failures.
+\item Produced a checklist and examples illustrating when human accessibility review remains necessary.
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming Languages:} Kotlin, TypeScript, Java, SQL
+
+\textbf{Frameworks \& Libraries:} Jetpack Compose, React, Room, Playwright
+
+\textbf{Systems \& Tools:} Android Studio, Git, CI pipelines
+
+\textbf{Specializations:} Mobile performance, offline synchronization, accessible interfaces
+
+\section{Honors \& Awards}
+\textbf{Eastport Inclusive Design Challenge} \hfill 2023 \textit{-- First place for an accessible campus navigation prototype.}
+
+\textbf{Product Accessibility Contribution Recognition} \hfill 2026 \textit{-- Recognized accessibility fixes and contributor documentation.}
+\end{document}
