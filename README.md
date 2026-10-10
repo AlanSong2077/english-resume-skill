@@ -1,4 +1,6 @@
-# CS Resume Generator
+# English Resume Skill Agent
+
+**中文** | [English](README.en.md)
 
 **把中文或零散经历，整理成事实准确、排版统一、可编辑的英文简历。**
 
@@ -9,6 +11,38 @@ English resume generation for CS graduate applications: a fact-preserving AI Ski
 ![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue)
 ![Python: 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Output: English Resume](https://img.shields.io/badge/Output-English%20Resume-success)
+
+## 第一次使用：选一种方式
+
+**想让 AI 帮你整理材料、写英文？** 安装 Skill 后调用它。**已经有整理好的 JSON？** 直接运行 Python。
+
+### A. 安装 Skill，让 AI 生成英文简历
+
+下载本仓库 ZIP 并解压，将文件夹命名为 `english-resume-skill-agent`，确认 `SKILL.md` 在该文件夹根目录。把整个文件夹放到 Codex 的用户 Skill 目录 `~/.agents/skills/`，或当前项目的 `.agents/skills/` 中。Windows 使用 `<user profile>/.agents/skills/`。
+
+安装后的目录应是 `.agents/skills/english-resume-skill-agent/SKILL.md`，避免多套一层文件夹。若没有发现 Skill，重新打开 Codex。
+
+然后粘贴下面的指令，并附上你的经历或现有简历：
+
+```text
+$english-resume-skill-agent
+请根据我提供的材料生成英文简历，用于 CS 硕士申请。
+采用研究型（或就业型）顺序，保持制式排版。
+缺失、不明确或矛盾的信息必须先让我人工核验。
+请交付 JSON、LaTeX，以及编译条件允许时的 PDF。
+```
+
+**AI 使用者需要支持 Skill 和文件执行的工具；普通聊天窗口不一定能运行脚本。**其他平台的安装位置以其官方说明为准。
+
+### B. 不使用 AI，直接生成文件
+
+安装 Python，在本仓库根目录执行：
+
+```bash
+python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/resume.tex
+```
+
+想生成 PDF，先安装 LaTeX 编译器，然后在命令末尾加 `--pdf`。Windows 可用 `py -3` 替换 `python3`。输入必须是已经整理好的 JSON；脚本不会自行理解原始简历或写英文。
 
 ## 项目应用成果
 
@@ -72,14 +106,14 @@ AI 负责理解和润色；Python 负责结构校验与固定排版。事实不�
 
 ## 方式一：作为 Skill 使用
 
-下载或克隆整个仓库，把完整的 `cs-resume-generator` 文件夹安装到支持 Skill 的工具中，不能只复制 SKILL.md。
+下载或克隆整个仓库，把完整的 `english-resume-skill-agent` 文件夹安装到支持 Skill 的工具中，不能只复制 SKILL.md。
 
-Codex 可安装到用户目录 `~/.agents/skills/cs-resume-generator`，或项目目录 `.agents/skills/cs-resume-generator`。Windows 用户目录对应 `<user profile>/.agents/skills/cs-resume-generator`。避免安装多个同名副本。
+Codex 可安装到用户目录 `~/.agents/skills/english-resume-skill-agent`，或项目目录 `.agents/skills/english-resume-skill-agent`。Windows 用户目录对应 `<user profile>/.agents/skills/english-resume-skill-agent`。避免安装多个同名副本。
 
 安装后输入：
 
 ```text
-$cs-resume-generator
+$english-resume-skill-agent
 请根据我提供的材料生成英文 CS 硕士申请简历。
 采用研究型（或就业型）顺序，保持制式排版。
 不清楚或缺失的信息必须先让我人工核验，不要使用 DEMO 的经历或数字。

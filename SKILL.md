@@ -1,5 +1,5 @@
 ---
-name: cs-resume-generator
+name: english-resume-skill-agent
 description: Create or revise English resumes for US/UK Computer Science master's applications from supplied facts, with JSON and LaTeX output and optional PDF generation. Use for CS graduate application resumes or 申请简历.
 ---
 
@@ -52,7 +52,7 @@ The former ReportLab backend is removed to avoid inconsistent schemas, unescaped
 下载页面提供安装程序；本技能不附带安装程序，也不自动安装软件。PDF 所需宏包包括 geometry、enumitem、titlesec、hyperref、xcolor、parskip。下载后按官方说明安装，执行 `python3 --version` 和 `xelatex --version` 检查环境；Windows 可用 `py -3 --version`。
 
 ```bash
-# 在解压后的 cs-resume-generator 文件夹运行：只生成 LaTeX
+# 在解压后的 english-resume-skill-agent 文件夹运行：只生成 LaTeX
 python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/resume.tex
 # 安装编译器后：生成 LaTeX 和 PDF
 python3 scripts/generate_resume.py examples/01-research-ai.json -o generated/resume.tex --pdf
